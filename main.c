@@ -1,34 +1,63 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+#include <stdint.h>
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "CannotResolve"
 int main() {
     int q=(10+8-21)*9/3;
-    printf("%d\n",q);
-    printf("%f\n", sin(M_PI / 2));//PIÊòØÂºßÂ∫¶
+    printf("º”ºı£∫%d\n",q);
+
+    printf("M_PI/2£∫%f\n", sin(M_PI / 2));//PI «ª°∂»
 
     /*
-     * & ‰Ωç‰∏é
-     * | ‰ΩçÊàñ
-     * ~ ‰ΩçÂèç
-     * ^ ÂºÇÊàñ
-     * >> Âè≥Áßª
-     * << Â∑¶Áßª
+     * & Œª”Î
+     * | ŒªªÚ
+     * ~ Œª∑¥
+     * ^ “ÏªÚ
+     * >> ”““∆
+     * << ◊Û“∆
      * */
-    int a =0b101;
-    int b =0b100;
-    int c =0b100;
-
+    int a =0b1010;
+    int b =0b1001;
+    int c =0b101001;
 
     char string[25];
-    sprintf(string, "%x", 100); //Â∞Ü100ËΩ¨‰∏∫16ËøõÂà∂Ë°®Á§∫ÁöÑÂ≠óÁ¨¶‰∏≤„ÄÇ
+    sprintf(string, "16Ω¯÷∆£∫%x", 16); //Ω´100◊™Œ™16Ω¯÷∆±Ì æµƒ◊÷∑˚¥Æ°£
 
-    itoa(a&b,string,2);    //2ËøõÂà∂
+    itoa(a&b,string,2);    //2Ω¯÷∆
+    printf("&£∫%s\n",string);
+
+    itoa(a|b,string,2);    //2Ω¯÷∆
+    printf("|£∫%s\n",string);
+
+    //0±‰1 1±‰0
+    int8_t d=-3;
+    uint8_t e=0b000000001;
+    uint8_t  f=0b11111110;
+    printf("d:%d\n",~d);
+    //Œ¥ƒ‹¥ÔµΩ∆⁄Õ˚÷µ
+    printf("e:%d\n",e);
+    printf("e:%d\n",~e);
+    printf("f:%d\n",f);
+    printf("f:%d\n",~f);
+
+    //“‚Àº «œ‡Õ¨µ√0 ∑ÒŒ™1
+    int h=1;
+    int i=0;
+    printf("^£∫%d\n",h^i);
+
+    itoa(a^c,string,2);    //2Ω¯÷∆
     printf("%s\n",string);
 
-    printf("%d\n",a|b);
+    int8_t j=2;
+    printf("%d\n",~j);
+
+    int k=1;
+    printf("K:%d\n",k<<1);
+
+    uint32_t color=0xffffffff;//ARGB(Alpha,RED,GREEN,BLUE);AlphaÕ∏√˜∂»ff «ÕÍ»´≤ªÕ∏√˜
 
     return 0;
 }
